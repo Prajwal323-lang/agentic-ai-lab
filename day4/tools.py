@@ -20,6 +20,14 @@ def multiply_numbers(numbers):
 
 
 def divide_number(value, divisor):
+    #handle list input
+    if isinstance(value, list):
+        if len(value) == 0:
+            raise ValueError("No numbers to divide")
+        value = value[0]
+
+    #handle division by zero
     if divisor == 0:
-        return "Cannot divide by zero"
+        raise ValueError("Division by zero is not allowed")
+
     return value / divisor

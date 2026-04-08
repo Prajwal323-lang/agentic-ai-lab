@@ -38,7 +38,7 @@ def run_agent():
                 print(f"Step: Multiply → {data}")
 
             elif step == "divide":
-                # Extract divisor from input (e.g., "divide by 2")
+                # Extract divisor from input 
                 match = re.search(r'divide by (\d+)', user_input.lower())
                 if match:
                     divisor = int(match.group(1))
